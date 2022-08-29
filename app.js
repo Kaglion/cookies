@@ -33,7 +33,20 @@ function btnAction(params) {
         listeCookies();
     }
 
-    // console.log(description);
+
+    function creerCookies(name, value, exp) {
+        
+        document.cookie = `${encodeURIComponent(name)}=${encodeURIComponent(value)}; expire = ${exp}`
+
+        let info = document.createElement('li');
+        info.innerText = `Cookie ${name} create`;
+        affichage.appendChild(info)
+
+        setTimeout(() => {
+            info.remove()
+        }, 2000)
+
+    }
     
 }
 
