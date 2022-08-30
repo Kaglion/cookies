@@ -38,7 +38,7 @@ function btnAction(params) {
 // create cookies
     function creerCookies(name, value, exp) {
         infoTxt.innerText = '';
-
+        affichage.innerHTML = '';
         // Check cookie same name 
         let cookies = document.cookie.split(';');
         cookies.forEach((cookie) => {
@@ -79,7 +79,7 @@ function btnAction(params) {
     // list cookies
 
     function listCookies() {
-
+        affichage.innerHTML =''
         let cookies = document.cookie.split(';');
 
         if (cookies.join() ===  "") {
@@ -93,7 +93,7 @@ function btnAction(params) {
             let item = document.createElement('li');
 
             infoTxt.innerText = "Click on cookie to delete";
-            item.innerText = `Nom : ${decodeURIComponent(formatCookie[0])} Valeur : ${decodeURIComponent(formatCookie[1])}`;
+            item.innerText = `Nom : ${decodeURIComponent(formatCookie[0])}, Valeur : ${decodeURIComponent(formatCookie[1])}`;
             affichage.appendChild(item);
 
             // console.log(formatCookies); 
